@@ -399,11 +399,8 @@ body {
 .nl-hero__quote {
   font-family: var(--font-serif);
   font-style: normal;
-  font-size: 13px;
   letter-spacing: 0.02em;
-  color: var(--nl-text-dim);
-  max-width: 520px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .nl-hero__title {
@@ -2092,5 +2089,412 @@ body {
   }
   .nl-hero__ctas .nl-btn {
     width: 100%;
+  }
+}
+
+/* ===========================
+   2026-05 PATCH — Section numbering off, layout updates
+   =========================== */
+
+/* 모든 섹션의 헤더 넘버 숨기고 단일 컬럼화 */
+.nl-section__head {
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+  align-items: start !important;
+}
+.nl-section__num {
+  display: none !important;
+}
+
+/* Hero — 새 eyebrow (3줄 + Northern Lights 바로 옆) */
+.nl-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+.nl-hero__taglist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid var(--nl-line);
+  padding-right: 28px;
+}
+.nl-hero__taglist li {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--nl-star);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+.nl-hero__taglist li::before {
+  content: "·";
+  width: auto;
+  height: auto;
+  background: transparent;
+  opacity: 0.8;
+  color: var(--nl-star);
+  font-family: var(--font-mono);
+}
+.nl-hero__brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 30px);
+  letter-spacing: 0.04em;
+  color: var(--nl-cream);
+  white-space: nowrap;
+}
+
+/* Hero — quote 큼직하게 / CTA 우측에 정렬 */
+.nl-hero__meta {
+  align-items: center !important;
+  flex-wrap: wrap;
+  gap: 28px 56px;
+}
+.nl-hero__meta .nl-hero__ctas {
+  flex: 0 0 auto;
+}
+.nl-hero__meta .nl-hero__quote {
+  flex: 1 1 360px;
+  margin: 0;
+  margin-left: auto;
+  text-align: right;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: clamp(18px, 1.9vw, 26px);
+  line-height: 1.45;
+  color: var(--nl-cream);
+  max-width: 620px;
+}
+.nl-hero__meta .nl-hero__quote p {
+  margin: 0 0 8px;
+  color: var(--nl-cream);
+  font-weight: 500;
+}
+.nl-hero__meta .nl-hero__quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--nl-text-faint);
+}
+@media (max-width: 820px) {
+  .nl-hero__meta .nl-hero__quote {
+    text-align: left;
+    margin-left: 0;
+    flex: 1 1 100%;
+  }
+}
+
+/* Assessment — 70% bold */
+.nl-keystone__pct {
+  font-weight: 800 !important;
+}
+
+/* Why — title 강조 */
+.nl-why__card h3 {
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* CEO — 단일 컬럼 스택 + 4-col stats */
+.nl-ceo--stack {
+  display: block;
+}
+.nl-ceo--stack .nl-ceo__copy {
+  max-width: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  gap: 40px;
+}
+.nl-ceo--stack .nl-ceo__copy blockquote {
+  text-align: left;
+  margin: 0;
+  max-width: 980px;
+}
+.nl-ceo__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--nl-line);
+  border: 1px solid var(--nl-line);
+  margin-top: 8px;
+}
+.nl-ceo__stat {
+  background: var(--nl-midnight);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 130px;
+}
+.nl-ceo__stat .nl-label {
+  display: block !important;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--nl-text-faint);
+}
+.nl-ceo__stat strong {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 2.4vw, 32px);
+  color: var(--nl-cream);
+  font-weight: 700;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  .nl-ceo__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* People — KO 크게 / EN 작게 (위치 스왑) */
+.nl-person__name {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  letter-spacing: 0;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 700;
+}
+.nl-person__name .ko {
+  display: block;
+  font-size: 1em;
+  font-style: normal;
+  font-family: var(--font-serif);
+  color: var(--nl-cream);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0;
+  order: 1;
+}
+.nl-person__name .en {
+  display: block;
+  font-size: 0.45em;
+  font-family: var(--font-mono);
+  color: var(--nl-text-faint);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  order: 2;
+}
+
+/* People — role / area 크게 */
+.nl-person__role .role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--nl-star);
+  font-weight: 600;
+}
+.nl-person__role .area {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--nl-cream);
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Programs — 좌측 트랙 리스트 전체 높이 채우기 */
+.nl-tracks {
+  align-items: stretch;
+}
+.nl-tracks__list {
+  padding: 0;
+  justify-content: stretch;
+}
+.nl-tracks__item {
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 22px 28px;
+  justify-content: center;
+  transition:
+    flex 0.4s ease,
+    background 0.35s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    padding 0.3s ease;
+}
+.nl-tracks__item.is-active {
+  flex: 2.4 1 0;
+  padding: 36px 28px 36px 36px;
+}
+.nl-tracks__item + .nl-tracks__item {
+  border-top: 1px solid var(--nl-line);
+}
+
+/* Programs — 패널 전환 애니메이션 */
+@keyframes nl-track-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nl-tracks__panel {
+  animation: nl-track-fade 0.4s ease both;
+}
+.nl-tracks__panel .nl-program {
+  animation: nl-track-fade 0.45s ease both;
+}
+.nl-tracks__panel .nl-program:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.nl-tracks__panel .nl-program:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.nl-tracks__panel .nl-program:nth-child(4) {
+  animation-delay: 0.12s;
+}
+.nl-tracks__panel .nl-program:nth-child(5) {
+  animation-delay: 0.16s;
+}
+
+/* Reviews (Section 07) */
+.nl-reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--nl-line);
+  border: 1px solid var(--nl-line);
+}
+.nl-review {
+  background: var(--nl-midnight);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 280px;
+  transition: background 0.3s ease;
+}
+.nl-review:hover {
+  background: rgba(26, 36, 102, 0.55);
+}
+.nl-review__stars {
+  display: inline-flex;
+  gap: 2px;
+  font-size: 14px;
+  color: var(--nl-line-strong);
+  letter-spacing: 1px;
+}
+.nl-review__stars .is-on {
+  color: var(--nl-star);
+}
+.nl-review__title {
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 1.4vw, 17px);
+  font-weight: 700;
+  color: var(--nl-cream);
+  margin: 0;
+  line-height: 1.4;
+}
+.nl-review__body {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--nl-text-dim);
+  line-height: 1.7;
+  flex: 1;
+}
+.nl-review__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--nl-line);
+  padding-top: 14px;
+  margin-top: auto;
+}
+.nl-review__meta strong {
+  font-family: var(--font-sans);
+  color: var(--nl-cream);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+.nl-review__meta span {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--nl-star);
+}
+@media (max-width: 960px) {
+  .nl-reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .nl-reviews {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact — Google Maps iframe */
+.nl-loc__map {
+  padding: 0;
+  overflow: hidden;
+  background: var(--nl-midnight);
+  position: relative;
+}
+.nl-loc__map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.7) brightness(0.95);
+}
+
+/* Mobile tweaks for the new hero/eyebrow/quote */
+@media (max-width: 640px) {
+  .nl-hero__eyebrow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .nl-hero__brand {
+    font-size: 20px;
+  }
+  .nl-hero__taglist li {
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+  }
+  .nl-hero__quote {
+    font-size: 16px;
+    padding-top: 18px;
+  }
+  .nl-ceo__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nl-tracks__item {
+    flex: 0 0 auto;
+    min-height: auto;
+    padding: 16px 18px;
+  }
+  .nl-tracks__item + .nl-tracks__item {
+    border-top: 0;
   }
 }

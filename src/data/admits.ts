@@ -74,10 +74,10 @@ export const ADMITS: Admit[] = [
     scholar: "Admitted · 2025",
   },
   {
-    num: "+ More",
-    school: "계속 업데이트 중",
-    major: "UPDATING SUCCESS STORIES",
-    scholar: "→ Contact for Details",
+    num: "+",
+    school: "more",
+    major: "",
+    scholar: "→ Contact",
     feature: true,
   },
 ];

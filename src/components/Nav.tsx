@@ -73,7 +73,7 @@ export function Nav() {
           href="#contact"
           onClick={(e) => onClick(e, "contact")}
         >
-          Book Consultation →
+          무료 상담예약
         </a>
       </div>
     </nav>

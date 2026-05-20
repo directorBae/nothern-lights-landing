@@ -93,7 +93,7 @@ export function ContactSection() {
               </span>
               <span className="nl-channel__lbl">
                 <span className="nl-label">Zoom · Calendly</span>
-                <span className="val">무료 초기상담 예약</span>
+                <span className="val">무료 상담예약</span>
               </span>
               <span className="nl-channel__arrow">Book →</span>
             </a>
@@ -106,8 +106,17 @@ export function ContactSection() {
               학생·학부모님과 함께 깊은 호흡으로 진행되는 상담실. 도심 한가운데,
               조용한 작업실 분위기로 설계되었습니다.
             </p>
-            <div className="nl-loc__map" aria-label="map placeholder">
-              <span className="nl-loc__pin"></span>
+            <div
+              className="nl-loc__map"
+              aria-label="Northern Lights studio map"
+            >
+              <iframe
+                title="Northern Lights — 서울특별시 강남구 선릉로 717"
+                src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EC%84%A0%EB%A6%89%EB%A1%9C+717&hl=ko&z=17&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
             <p
               style={{
@@ -118,7 +127,7 @@ export function ContactSection() {
                 textTransform: "uppercase",
               }}
             >
-              서울특별시 · 상세 주소는 예약 시 안내
+              서울특별시 강남구 선릉로 717
             </p>
           </aside>
         </div>

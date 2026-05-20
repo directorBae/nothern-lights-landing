@@ -28,11 +28,10 @@ export function PeopleSection() {
                   <span className="role">{p.role}</span>
                   <span className="area">{p.area}</span>
                 </div>
-                <div className="nl-person__avatar">{p.avatar}</div>
               </header>
               <h3 className="nl-person__name">
                 <span className="ko">{p.ko}</span>
-                {p.en}
+                <span className="en">{p.en}</span>
               </h3>
               <ul className="nl-person__creds">
                 {p.creds.map((c, j) => (

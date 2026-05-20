@@ -1,4 +1,15 @@
 export function CeoSection() {
+  const stats: [string, string][] = [
+    ["EC Coordinating", "5 yrs"],
+    ["Teaching", "8 yrs"],
+    ["Top-50 Admits", "11+"],
+    ["Scholarship Awarded", "$108K+"],
+    ["EC Coordinating", "5 yrs"],
+    ["Teaching", "8 yrs"],
+    ["Top-50 Admits", "11+"],
+    ["Scholarship Awarded", "$108K+"],
+  ];
+
   return (
     <section className="nl-section" data-screen-label="About — CEO Letter">
       <div className="nl-container">
@@ -12,15 +23,7 @@ export function CeoSection() {
           </div>
         </header>
 
-        <div className="nl-ceo">
-          <figure className="nl-ceo__portrait">
-            <div className="nl-ceo__silhouette"></div>
-            <figcaption className="caption">
-              <strong>JEONG JIN SEOK</strong>
-              <span>대표이사 정 진 석 · CEO of Uranus Inc.</span>
-            </figcaption>
-          </figure>
-
+        <div className="nl-ceo nl-ceo--stack">
           <div className="nl-ceo__copy">
             <blockquote>
               "단순한 입시 조력자를 넘어, 학생의 내면에 숨겨진 고유한 잠재력을
@@ -28,41 +31,13 @@ export function CeoSection() {
               동행하는 <em>LIFE MENTOR</em>가 되겠습니다."
             </blockquote>
 
-            <div className="nl-credentials">
-              <div className="nl-credentials__col">
-                <h4>Professional Career</h4>
-                <ul>
-                  <li>
-                    CEO of{" "}
-                    <strong style={{ color: "var(--nl-cream)" }}>
-                      URANUS Inc.
-                    </strong>
-                  </li>
-                  <li>CEO of ALPHA WAVE</li>
-                  <li>CEO of PLENUS</li>
-                  <li>EC 코디네이팅 경력 5년</li>
-                  <li>TOEFL · IELTS · SAT · AP · 국제학교 강의 경력 8년</li>
-                </ul>
-              </div>
-              <div className="nl-credentials__col">
-                <h4>Education</h4>
-                <ul>
-                  <li>
-                    Berklee College of Music — Music Production M.A.,{" "}
-                    <em>Valedictorian</em>
-                  </li>
-                  <li>
-                    Boston University — B.S. in Business (International &amp;
-                    Venture Management)
-                  </li>
-                  <li>Boston University — B.A. in Economics</li>
-                </ul>
-                <h4 style={{ marginTop: 24 }}>Admit References</h4>
-                <ul>
-                  <li>UC Berkeley · Georgia Tech · Boston University · NYU</li>
-                  <li>Purdue · UC San Francisco · GSU · UW · UIUC 외 다수</li>
-                </ul>
-              </div>
+            <div className="nl-ceo__stats" aria-label="Founder track record">
+              {stats.map(([label, val], i) => (
+                <div className="nl-ceo__stat" key={`${label}-${i}`}>
+                  <span className="nl-label">{label}</span>
+                  <strong>{val}</strong>
+                </div>
+              ))}
             </div>
           </div>
         </div>

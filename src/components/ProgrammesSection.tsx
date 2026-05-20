@@ -50,7 +50,7 @@ export function ProgrammesSection() {
               </button>
             ))}
           </div>
-          <div className="nl-tracks__panel" role="tabpanel">
+          <div className="nl-tracks__panel" role="tabpanel" key={track.id}>
             <div className="nl-tracks__panel-head">
               <h3>{track.ko} 프로그램</h3>
               <p className="lede">{track.lede}</p>

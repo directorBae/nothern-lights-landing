@@ -21,6 +21,8 @@ export const PEOPLE: Person[] = [
       { text: "Boston Univ. — Business & Economics" },
       { text: "EC Coordinating 5 yrs · Teaching 8 yrs" },
     ],
+    quote:
+      '"학생 한 명 한 명의 좌표를 가장 정확히 짚어드리는 것 — 그것이 노던라이츠의 시작이자 끝입니다. 입시를 넘어, 인생의 다음 챕터를 함께 설계합니다."',
   },
   {
     role: "Director · 디렉터",
@@ -68,21 +70,6 @@ export const PEOPLE: Person[] = [
       '"이제는 저 혼자만의 노래가 아닌, 학생들과 호흡을 맞추며 함께 연주하는 Symphony를 들려드리겠습니다."',
   },
   {
-    role: "Advisor · 자문",
-    area: "법률 전문위원 · NY Bar",
-    avatar: "L",
-    ko: "이 호 건",
-    en: "Ho Gun Lee",
-    creds: [
-      { text: "미국 뉴욕주 변호사 · 법무법인 케이피앤파트너스", hi: true },
-      { text: "국제중재 · 기업자문 · 이민법 자문" },
-      { text: "미국변호사협회(ABA) · 뉴욕변호사협회(NYSBA)" },
-      { text: "전 법무법인 대륙아주 · 전 유엔 국제상거래법위원회" },
-    ],
-    quote:
-      '"비자·영주권 컨설팅부터 EC 프로젝트 자문까지, 노던라이츠와 함께하는 여러분의 A to Z 여정을 동행합니다."',
-  },
-  {
     role: "Partner · 파트너",
     area: "미술 EC 전문위원 · Gallery Director",
     avatar: "B",
@@ -94,6 +81,8 @@ export const PEOPLE: Person[] = [
       { text: "전 WOOZOO CULTURES (UK) 해외사업팀" },
       { text: "SETEC BANK ART FAIR 참가 예정" },
     ],
+    quote:
+      '"동시대 미술의 현장과 학생의 포트폴리오를 잇는 다리가 되겠습니다. 갤러리와 페어에서 검증된 안목으로 한 단계 높은 EC를 설계합니다."',
   },
   {
     role: "Partner · 파트너",

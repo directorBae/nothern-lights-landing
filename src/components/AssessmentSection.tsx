@@ -57,10 +57,11 @@ export function AssessmentSection() {
             <ul className="nl-pillars">
               {[
                 ["01", "Academic Rigor", "도전적인 교과 과정 이수"],
-                ["02", "Extracurricular (EC)", '리더십과 활동의 이유("Why")'],
+                ["02", "Extracurricular (EC)", '리더쉭과 활동의 이유("Why")'],
                 ["03", "Personal Statement", "고유한 목소리와 가치관"],
                 ["04", "Recommendation", "제3자가 증언하는 인성"],
                 ["05", "Context", "환경 대비 성취도 평가"],
+                ["06", "Interview & Fit", "대화로 검증되는 적합성"],
               ].map(([n, t, d]) => (
                 <li key={n}>
                   <span className="num">{n}</span>
@@ -107,6 +108,11 @@ export function AssessmentSection() {
                   "05",
                   "Faculty Audit / Audition",
                   "현직 거장들의 선택을 받는 절차",
+                ],
+                [
+                  "06",
+                  "Recommendation & Mentorship",
+                  "멘토·교수진이 보증하는 예술가 서사",
                 ],
               ].map(([n, t, d]) => (
                 <li key={n}>

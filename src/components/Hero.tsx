@@ -44,10 +44,13 @@ export function Hero() {
       </div>
 
       <div className="nl-container nl-hero__inner">
-        <div>
-          <span className="nl-eyebrow">
-            Strategic Admission Consulting · 노던라이츠
-          </span>
+        <div className="nl-hero__eyebrow">
+          <ul className="nl-hero__taglist">
+            <li>전문 유학 컨설팅</li>
+            <li>미국 대학 입시 / 편입</li>
+            <li>보딩스쿨 진학</li>
+          </ul>
+          <span className="nl-hero__brand">Northern Lights</span>
         </div>
 
         <div className="nl-hero__title">
@@ -70,7 +73,7 @@ export function Hero() {
               href="#contact"
               onClick={smoothScrollHandler("contact")}
             >
-              무료 초기상담 예약
+              무료 상담예약
               <span className="arrow">→</span>
             </a>
             <a
@@ -78,32 +81,19 @@ export function Hero() {
               href="#programmes"
               onClick={smoothScrollHandler("programmes")}
             >
-              프로그램 살펴보기
+              프로그램
               <span className="arrow">↓</span>
             </a>
           </div>
 
-          <div className="nl-hero__stats">
-            {[
-              ["EC Coordinating", "5 yrs"],
-              ["Teaching", "8 yrs"],
-              ["Top-50 Admits", "11+"],
-              ["Scholarship Awarded", "$108K+"],
-            ].map(([label, val]) => (
-              <div className="nl-hero__stat" key={label}>
-                <span className="nl-label">{label}</span>
-                <strong>{val}</strong>
-              </div>
-            ))}
-          </div>
+          <blockquote className="nl-hero__quote">
+            <p>
+              "Intelligence plus character — that is the goal of true
+              education."
+            </p>
+            <cite>— Dr. Martin Luther King Jr.</cite>
+          </blockquote>
         </div>
-
-        <p className="nl-hero__quote">
-          <em>
-            "Intelligence plus character — that is the goal of true education."
-          </em>
-          <br />— Dr. Martin Luther King Jr.
-        </p>
       </div>
     </header>
   );
